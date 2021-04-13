@@ -13,16 +13,13 @@
     <header>
       <h1>
         <a href="/">Tech Blog Site</a>
-      </h1>
-      {{!-- <nav>
-        <a href="/login">login</a>
-      </nav> --}}
       <nav>
-        {{#if loggedIn}}
+        {{!-- {{#if loggedIn}} --}}
+        <a href="/dashboard">dashboard</a>
         <button id="logout" class="btn-no-style">logout</button>
-        {{else}}
+        {{!-- {{else}} --}}
         <a href="/login">login</a>
-        {{/if}}
+        {{!-- {{/if}} --}}
       </nav>
     </header>
     <main>

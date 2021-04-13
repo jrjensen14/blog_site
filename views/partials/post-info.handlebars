@@ -1,7 +1,7 @@
   <article class="post">
       <div class="title">
-        <a href="{{post_url}}" target="_blank">{{title}}</a>
-        <span>({{format_date post_url}})</span>
+        {{!-- <a href="{{post_url}}" target="_blank">{{title}}</a>
+        <span>({{format_date post_url}})</span> --}}
       </div>
       <div class="meta">
         posted by {{user.username}} on
@@ -11,15 +11,3 @@
       </div>
     </article>
 
-    {{!-- <article class="post">
-  <div class="title">
-    <a href="{{post.post_url}}" target="_blank">{{post.title}}</a>
-    <span>({{post.post_url}})</span>
-  </div>
-  <div class="meta">
-     posted by {{post.user.username}} on
-    {{post.created_at}}
-    |
-    <a href="/post/{{post.id}}">{{post.comments.length}} comment(s)</a>
-  </div>
-</article> --}}
