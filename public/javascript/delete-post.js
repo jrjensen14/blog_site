@@ -1,10 +1,10 @@
+const postId = document.querySelector('input[name="post-id"]').value;
+
 async function deleteFormHandler(event) {
   event.preventDefault();
 
-  const id = window.location.toString().split('/')[
-    window.location.toString().split('/').length - 1
-  ];
-  const response = await fetch(`/api/posts/${id}`, {
+  
+  const response = await fetch(`/api/post/${postId}`, {
     method: 'DELETE'
   });
 

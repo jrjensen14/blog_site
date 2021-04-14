@@ -1,4 +1,47 @@
-<form id= "login-form" class="login-form">
+<div class="card">
+  <div class="card-header">
+    <h2>Login</h2>
+  </div>
+  <form id="login-form" class="card-body">
+    <div>
+      <label for="username-input-login">Username</label>
+      <input type="text" id="username-input-login" />
+    </div>
+    <div>
+      <label for="password-input-login" class="form-label">Password</label>
+      <input type="password" id="password-input-login" />
+    </div>
+    <button type="submit" id="login-btn" class="btn">Login!</button>
+    <a type="button" href="/signup">Sign up instead</a>
+  </form>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    <h2>Sign Up</h2>
+  </div>
+  <div id="signup" role="tabpanel">
+    <form id="signup-form" class="card-body">
+      <div>
+        <label for="username-input-signup">Username</label>
+        <input type="text" id="username-input-signup" />
+      </div>
+      <div>
+        <label for="password-input-signup">Password</label>
+        <input type="password" id="password-input-signup" />
+      </div>
+      <button type="submit" id="signup-btn" class="btn" >Signup!</button>
+      <a href="/login">Login instead</a>
+    </form>
+  </div>
+</div>
+
+<script src="/javascript/login.js"></script>
+<script src="/javascript/signup.js"></script>
+
+
+
+{{!-- <form id= "login-form" class="card-body">
   <div>
     <h2> Login </h2>
     <label for="username-login">username:</label>
@@ -9,11 +52,11 @@
     <input type="password" id="password-login" />
   </div>
   <div>
-    <button type="submit">login</button>
+    <button type="submit" id="login-btn" class="btn">login</button>
   </div>
 </form>
 
-<form class="signup-form">
+<form id="signup-form">
   <div>
     <h2> Sign Up </h2>
     <label for="username-signup">username:</label>
@@ -24,8 +67,9 @@
     <input type="password" id="password-signup" />
   </div>
   <div>
-    <button type="submit">signup</button>
+    <button type="submit" id="signup-btn" class="btn">signup</button>
   </div>
 </form>
 
 <script src="/javascript/login.js"></script>
+<script src="/javascript/signup.js"></script> --}}
