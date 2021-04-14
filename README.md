@@ -1,6 +1,5 @@
 # Tech Blog Site
 
-![Screenshot of SLP Goalden Login Page](./screenshots/screenshot-2.png)
 
 ## Description 
 
@@ -17,7 +16,7 @@ Build a CMS-style blog site similar to a Wordpress site, where developers can pu
 
 ## Website
 
-https://mighty-falls-97052.herokuapp.com/
+https://thawing-refuge-08157.herokuapp.com 
 
 ---
 
