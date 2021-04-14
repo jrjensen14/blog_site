@@ -1,23 +1,23 @@
-const router = require('express').Router();
-const sequelize = require('../config/connection');
-const { Post, User, Comment } = require('../models');
+const router = require("express").Router();
+const { Post, Comment, User } = require("../models/");
 
-router.get('/', (req, res) => {
+// get all posts for homepage
+router.get("/", (req, res) => {
   Post.findAll({
     include: [User],
   })
-    .then(dbPostData => {
+    .then((dbPostData) => {
       const posts = dbPostData.map((post) => post.get({ plain: true }));
 
-      res.render('all-post', { posts });
+      res.render("all-posts", { posts });
     })
-    .catch(err => {
-      console.log(err);
+    .catch((err) => {
       res.status(500).json(err);
     });
 });
 
-router.get('/post/:id', (req, res) => {
+// get single post
+router.get("/post/:id", (req, res) => {
   Post.findByPk(req.params.id, {
     include: [
       User,
@@ -27,27 +27,27 @@ router.get('/post/:id', (req, res) => {
       },
     ],
   })
-    .then(dbPostData => {
+    .then((dbPostData) => {
       if (dbPostData) {
-      const post = dbPostData.get({ plain: true });
-      res.render('single-post', { post });
+        const post = dbPostData.get({ plain: true });
+
+        res.render("single-post", { post });
       } else {
-        res.status(404).json(err);
+        res.status(404).end();
       }
     })
-    .catch(err => {
-      console.log(err);
+    .catch((err) => {
       res.status(500).json(err);
     });
 });
 
-router.get('/login', (req, res) => {
+router.get("/login", (req, res) => {
   if (req.session.loggedIn) {
-    res.redirect('/');
+    res.redirect("/");
     return;
   }
 
-  res.render('login');
+  res.render("login");
 });
 
 router.get("/signup", (req, res) => {

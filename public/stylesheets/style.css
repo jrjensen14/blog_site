@@ -1,10 +1,9 @@
 :root {
-  --primary: #ccdad1;
-  --secondary: #9caea9;
-  --tertiary: #788585;
-  --light-dark: #6f6866;
-  --dark: #38302e;
-  /* --border-radius: 0.3rem; */
+  --primary: #fce8dd;
+  --secondary: #ffb4a2;
+  --tertiary: #e5989b;
+  --light-dark: #b5838d;
+  --dark: #6d6875;
 }
 
 * {
@@ -42,7 +41,8 @@ h2 a {
 }
 
 header {
-  margin-top: 50px;
+  margin-top: 0px;
+  color: var(--primary);
 }
 
 main {
@@ -79,10 +79,7 @@ input {
   margin: 5px 0;
   border-radius: var(--border-radius);
   color: var(--primary);
-  border: none;
-  outline: none;
   background-color: var(--light-dark);
-  /* box-shadow: 3px 3px var(--dark); */
   transform: translate(-1px, -1px);
 }
 
@@ -90,22 +87,16 @@ input {
   color: var(--primary);
   background-color: var(--tertiary);
   transform: translate(0, 0);
-  box-shadow: 2px 2px var(--dark);
 }
 
 a {
   text-decoration: none;
   color: var(--dark);
-  /* font-size: 1.3rem; */
-  /* background-color: var(--light-dark); */
   transition: color .1s;
 }
 
 a:hover {
-  color: var(--primary);
   background-color: var(--tertiary);
-  transform: translate(0, 0);
-  box-shadow: 2px 2px var(--dark);
 }
 
 .btn-inline {
@@ -118,9 +109,7 @@ a:hover {
 
 .navbar {
   width: 100%;
-  /* position: fixed; */
-  /* background-color: var(--dark); */
-  /* color: var(--dark); */
+  color: var(--dark);
 }
 
 .nav-item {
@@ -134,7 +123,6 @@ a:hover {
 .hero {
   padding: 3% 4%;
   background-color: var(--dark);
-  color: var(--primary);
 }
 
 .hero p {
@@ -143,16 +131,12 @@ a:hover {
 
 .app-title {
   font-size: 3rem;
-  background-color: var(--primary);
-  color: var(--dark);
   padding: 0 10px;
   display: inline-block;
-  /* border-radius: var(--border-radius);
-  box-shadow: 6px 5px var(--light-dark); */
 }
 
 .app-title a {
-  color: var(--dark);
+  color: var(--primary);
 }
 
 .list-group {
@@ -195,7 +179,9 @@ a:hover {
   padding: 1%;
   border-radius: calc(0.18rem - 1px) calc(0.18rem - 1px) 0 0;
 }
-
+.card-header h2 a {
+  color: var(--primary);
+}
 .card-body {
   padding: 1%;
 }
